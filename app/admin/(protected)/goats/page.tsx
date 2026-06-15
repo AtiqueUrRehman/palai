@@ -30,7 +30,8 @@ export default async function AdminGoatsPage() {
             No goats yet. <Link href="/admin/goats/new" style={{ color: 'var(--teal)' }}>Add your first goat</Link>.
           </div>
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' as React.CSSProperties['WebkitOverflowScrolling'] }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 580 }}>
             <thead>
               <tr style={{ borderBottom: '1px solid var(--line)' }}>
                 {['ID', 'Name', 'Breed', 'Weight', 'Price', 'Status', 'Actions'].map(h => (
@@ -60,6 +61,7 @@ export default async function AdminGoatsPage() {
               ))}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>
