@@ -55,8 +55,8 @@ export default function Header({ farmName }: { farmName: string }) {
           <button
             onClick={() => setOpen(v => !v)}
             aria-label="Menu"
-            className="flex md:hidden"
-            style={{ width: 42, height: 42, borderRadius: 13, border: '1.5px solid var(--line)', background: 'var(--surface)', cursor: 'pointer', display: 'grid', placeItems: 'center', flexShrink: 0 }}
+            className="flex md:hidden items-center justify-center"
+            style={{ width: 42, height: 42, borderRadius: 13, border: '1.5px solid var(--line)', background: 'var(--surface)', cursor: 'pointer', flexShrink: 0 }}
           >
             {open ? <X size={22} color="var(--ink)" /> : <Menu size={22} color="var(--ink)" />}
           </button>
