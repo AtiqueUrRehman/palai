@@ -45,13 +45,13 @@ export default function GoatForm({ goat }: Props) {
 
       if (videoFile) {
         setUploading(true)
-        const res = await fetch('/api/upload', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filename: videoFile.name, contentType: videoFile.type, farmSlug: 'malik', goatId: form.id || 'new' }),
-        })
-        const { uploadUrl, publicUrl } = await res.json()
-        await fetch(uploadUrl, { method: 'PUT', body: videoFile, headers: { 'Content-Type': videoFile.type } })
+        const fd = new FormData()
+        fd.append('file', videoFile)
+        fd.append('farmSlug', 'malik')
+        fd.append('goatId', form.id || 'new')
+        const res = await fetch('/api/upload', { method: 'POST', body: fd })
+        if (!res.ok) throw new Error((await res.json()).error ?? 'Upload failed')
+        const { publicUrl } = await res.json()
         videoUrl = publicUrl
         setUploading(false)
       }
