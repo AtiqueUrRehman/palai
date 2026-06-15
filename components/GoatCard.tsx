@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { Scale, ArrowRight } from 'lucide-react'
 import VideoThumb from './VideoThumb'
