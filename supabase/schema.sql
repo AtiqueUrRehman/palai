@@ -1,4 +1,4 @@
--- Malik Farms schema
+-- Sher Muhammad Livestock Farms schema
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
@@ -17,7 +17,7 @@ CREATE TABLE farms (
 );
 
 INSERT INTO farms (slug, name, tagline, location, phone, whatsapp) VALUES
-('malik', 'Malik Farms', 'Bakra Eid, sorted.', 'Pattoki, Punjab', '+92 300 1234567', '+92 300 1234567');
+('malik', 'Sher Muhammad Livestock Farms', 'Raised in the fields of Thoha Mehram Khan. Delivered to your door.', 'Thoha Mehram Khan, Rawalpindi', '+92 301 9558219', '+92 301 9558219');
 
 -- goats
 CREATE TABLE goats (

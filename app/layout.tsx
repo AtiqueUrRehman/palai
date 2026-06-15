@@ -19,8 +19,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Malik Farms — Qurbani Goats',
-  description: 'Reserve your Eid-ul-Adha goat by video. We raise it, you watch it grow, we deliver on Eid morning.',
+  title: 'Sher Muhammad Livestock Farms — Qurbani Goats',
+  description: 'Reserve your Eid-ul-Adha goat by video. Raised in Thoha Mehram Khan, we care for it and deliver on Eid morning.',
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

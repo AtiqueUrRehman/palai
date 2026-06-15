@@ -17,14 +17,14 @@ const STEPS = [
 const PRICES = [
   { icon: Check, title: 'Goat price', amount: 'From Rs 69,000', note: 'One-time, set when you reserve. Varies by breed, weight and age — shown on each goat.', highlight: false },
   { icon: Leaf, title: 'Monthly care', amount: 'Rs 3,800–6,500 / mo', note: 'Per goat, billed monthly until Eid. Covers feed, water, shelter, vaccination and vet.', highlight: true },
-  { icon: Truck, title: 'Delivery', amount: 'Free in zone', note: 'Lahore, Pattoki & nearby on Eid morning. Other cities at actual transport cost.', highlight: false },
+  { icon: Truck, title: 'Delivery', amount: 'Free in zone', note: 'Rawalpindi, Islamabad & nearby on Eid morning. Other cities at actual transport cost.', highlight: false },
 ]
 
 const FAQ = [
   { q: 'What does the monthly care charge cover?', a: 'Feed, clean water, shelter, routine vaccination and vet checkups. It is a fixed amount per goat per month, billed until delivery on Eid.' },
   { q: 'What if my goat falls sick or dies?', a: 'We carry the risk. If your reserved goat cannot be delivered in healthy condition, we replace it with an equivalent or better animal at no extra cost — see Terms.' },
   { q: 'Can I visit the farm?', a: 'Yes. You are welcome to visit by appointment and meet your goat in person before Eid.' },
-  { q: 'How is delivery handled?', a: 'Free doorstep delivery within Lahore, Pattoki and nearby cities on Eid morning. Other cities are arranged at actual transport cost.' },
+  { q: 'How is delivery handled?', a: 'Free doorstep delivery within Rawalpindi, Islamabad and nearby areas on Eid morning. Other cities are arranged at actual transport cost.' },
 ]
 
 export default function HowPage() {

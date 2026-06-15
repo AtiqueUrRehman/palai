@@ -39,11 +39,11 @@ const BASE_THEME: FarmTheme = {
 export const farms: Record<string, FarmConfig> = {
   malik: {
     slug: 'malik',
-    name: 'Malik Farms',
-    tagline: 'Bakra Eid, sorted.',
-    location: 'Pattoki, Punjab',
-    phone: '+92 300 1234567',
-    whatsapp: '+92 300 1234567',
+    name: 'Sher Muhammad Livestock Farms',
+    tagline: 'Raised in the fields of Thoha Mehram Khan. Delivered to your door.',
+    location: 'Thoha Mehram Khan, Rawalpindi',
+    phone: '+92 301 9558219',
+    whatsapp: '+92 301 9558219',
     theme: {},
   },
 }

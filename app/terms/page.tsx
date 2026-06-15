@@ -8,12 +8,12 @@ import SectionHeading from '@/components/SectionHeading'
 const TERMS = [
   { t: 'Reservation & token', d: 'A goat is reserved against your name only after a token payment is received. The token is adjusted into the final price. Until the token is paid, any goat shown as available may be reserved by another client.' },
   { t: 'Monthly care charges', d: 'A fixed monthly care charge applies per reserved goat from the date of reservation until delivery on Eid. Charges are billed in advance each month and are non-refundable once a month has begun, as feed and care are provided continuously.' },
-  { t: 'Health, mortality & replacement', d: 'All animals are vaccinated and monitored by our farm staff and an on-call veterinarian. Malik Farms bears the risk of illness or mortality before delivery. Should your reserved animal become unfit for qurbani, we will provide a replacement of equal or greater value at no additional cost.' },
+  { t: 'Health, mortality & replacement', d: 'All animals are vaccinated and monitored by our farm staff and an on-call veterinarian. Sher Muhammad Livestock Farms bears the risk of illness or mortality before delivery. Should your reserved animal become unfit for qurbani, we will provide a replacement of equal or greater value at no additional cost.' },
   { t: 'Weight & description', d: 'Weights and ages are recorded at the time of listing and may increase naturally before Eid. Listing videos and details are provided in good faith; minor variation in appearance is normal as the animal grows.' },
   { t: 'Delivery', d: 'Delivery is made to the address provided by the client on the morning of Eid-ul-Adha, before Eid prayers where possible. Free delivery applies within listed areas; transport for other locations is charged at actual cost and confirmed in advance.' },
   { t: 'Payment & balance', d: 'The remaining balance of the goat price, along with any outstanding care charges, must be cleared at least three days before Eid. Delivery is subject to full and cleared payment.' },
   { t: 'Cancellation & refund', d: 'You may cancel up to 30 days before Eid; the goat price token is refundable less any care charges already incurred. Cancellations within 30 days of Eid forfeit the token, as the animal is held exclusively for you.' },
-  { t: 'Force majeure', d: 'Malik Farms is not liable for delays or non-performance caused by events beyond reasonable control, including disease outbreaks, government restrictions or natural disasters. In such cases we will offer a replacement or refund of amounts paid toward the goat price.' },
+  { t: 'Force majeure', d: 'Sher Muhammad Livestock Farms is not liable for delays or non-performance caused by events beyond reasonable control, including disease outbreaks, government restrictions or natural disasters. In such cases we will offer a replacement or refund of amounts paid toward the goat price.' },
 ]
 
 export default async function TermsPage() {

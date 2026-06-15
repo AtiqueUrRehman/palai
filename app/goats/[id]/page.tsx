@@ -99,7 +99,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
 
                 {!goat.reserved && (
                   <div className="hidden md:block">
-                    <ReserveButton goatName={goat.name} whatsapp="+92 300 1234567" />
+                    <ReserveButton goatName={goat.name} whatsapp="+92 301 9558219" />
                   </div>
                 )}
                 {goat.reserved && (
@@ -124,7 +124,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
             <div style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 11.5, lineHeight: 1.3, color: 'var(--faint)', marginTop: 2 }}>+ {fmt(goat.care_fee)}/mo</div>
           </div>
           <div style={{ flex: 1 }}>
-            <ReserveButton goatName={goat.name} whatsapp="+92 300 1234567" full />
+            <ReserveButton goatName={goat.name} whatsapp="+92 301 9558219" full />
           </div>
         </div>
       )}
