@@ -50,10 +50,11 @@ export default function GoatForm({ goat }: Props) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ filename: videoFile.name, contentType: videoFile.type, farmSlug: 'malik', goatId: form.id || 'new' }),
         })
-        if (!res.ok) throw new Error((await res.json()).error ?? 'Upload failed')
-        const { uploadUrl, publicUrl } = await res.json()
+        const resText = await res.text()
+        if (!res.ok) throw new Error(`Upload API ${res.status}: ${resText}`)
+        const { uploadUrl, publicUrl } = JSON.parse(resText)
         const putRes = await fetch(uploadUrl, { method: 'PUT', body: videoFile, headers: { 'Content-Type': videoFile.type } })
-        if (!putRes.ok) throw new Error('Upload to storage failed — check R2 CORS settings')
+        if (!putRes.ok) throw new Error(`R2 PUT failed ${putRes.status} — check CORS settings`)
         videoUrl = publicUrl
         setUploading(false)
       }
