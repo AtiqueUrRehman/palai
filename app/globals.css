@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
+@theme {
+  /* breakpoint — single split at 840px */
+  --breakpoint-md: 840px;
+
+  /* brand colors — resolved from CSS custom props so per-farm override works */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-alt: var(--alt);
+  --color-ink: var(--ink);
+  --color-sub: var(--sub);
+  --color-faint: var(--faint);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-teal-soft: var(--teal-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+
+  /* fonts loaded by next/font — variables set in layout */
+  --font-head: var(--font-bricolage), system-ui, sans-serif;
+  --font-body: var(--font-plus-jakarta), system-ui, sans-serif;
+}
+
+/* Default theme B tokens (Warm Homestead) — overridden per farm on <html> */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg: #f4eee1;
+  --surface: #fffdf7;
+  --alt: #ece2cf;
+  --ink: #241f16;
+  --sub: #6f6452;
+  --faint: #9a8f79;
+  --teal: #13514a;
+  --teal-deep: #0e3c37;
+  --teal-soft: #dcebe5;
+  --gold: #c08a2b;
+  --gold-soft: #f0e2c6;
+  --line: rgba(36, 31, 22, 0.14);
+  --line-soft: rgba(36, 31, 22, 0.08);
+  --shadow: 0 3px 6px rgba(70, 48, 12, 0.06), 0 16px 36px rgba(70, 48, 12, 0.10);
+  --shadow-sm: 0 2px 4px rgba(70, 48, 12, 0.07);
+  --radius: 20px;
+  --radius-lg: 30px;
+  --btn-radius: 16px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
 }
