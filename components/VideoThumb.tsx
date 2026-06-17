@@ -16,8 +16,13 @@ export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = fal
 
   if (src) {
     return (
-      <div style={{ position: 'relative', width: '100%', aspectRatio: ratio, borderRadius: big ? 'var(--radius-lg)' : 'var(--radius)', overflow: 'hidden', background: '#000' }}>
-        <video src={src} controls playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      <div style={{ position: 'relative', width: '100%', borderRadius: big ? 'var(--radius-lg)' : 'var(--radius)', overflow: 'hidden', background: '#000' }}>
+        <video
+          src={src}
+          controls
+          playsInline
+          style={{ width: '100%', height: 'auto', maxHeight: big ? '80vh' : '60vh', display: 'block' }}
+        />
         {dur && (
           <div style={{ position: 'absolute', right: 9, bottom: 9, padding: '3px 8px', borderRadius: 7, background: 'rgba(0,0,0,0.5)', fontSize: 11, fontFamily: 'ui-monospace, monospace', color: '#fff', display: 'flex', alignItems: 'center', gap: 5 }}>
             <Play size={9} fill="#fff" color="#fff" /> {dur}
