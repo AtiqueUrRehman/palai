@@ -24,7 +24,7 @@ export default function Footer({ farm }: { farm: FarmConfig }) {
               <span style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 18 }}>{farm.name}</span>
             </div>
             <p style={{ margin: '0 0 20px', fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.5, color: 'rgba(255,255,255,0.7)', maxWidth: 320 }}>
-              Family-run goat farm in {farm.location}. Reserve by video, we raise it with care, delivered to your door on Eid.
+              Thoha Mehram Khan, Talagang. Qurbani Aap ki, Zimedari hamari.
             </p>
           </div>
 

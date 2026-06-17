@@ -83,7 +83,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
                   {[
                     { k: 'Goat price (one-time)', v: fmt(goat.price), bold: true },
                     { k: 'Monthly care till Eid', v: `${fmt(goat.care_fee)}/mo`, bold: false },
-                    { k: 'Doorstep delivery', v: 'Free in zone', bold: false },
+                    { k: 'Doorstep delivery', v: fmt(5000), bold: false },
                   ].map(r => (
                     <div key={r.k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', padding: '5px 0' }}>
                       <span style={{ fontFamily: 'var(--font-body)', fontWeight: r.bold ? 600 : 400, fontSize: 14, lineHeight: 1.3, color: 'var(--ink)' }}>{r.k}</span>
@@ -99,7 +99,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
 
                 {!goat.reserved && (
                   <div className="hidden md:block">
-                    <ReserveButton goatName={goat.name} whatsapp="+92 301 9558219" />
+                    <ReserveButton goatName={goat.name} goatId={goat.id} goatTag={goat.tag} />
                   </div>
                 )}
                 {goat.reserved && (
@@ -124,7 +124,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
             <div style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 11.5, lineHeight: 1.3, color: 'var(--faint)', marginTop: 2 }}>+ {fmt(goat.care_fee)}/mo</div>
           </div>
           <div style={{ flex: 1 }}>
-            <ReserveButton goatName={goat.name} whatsapp="+92 301 9558219" full />
+            <ReserveButton goatName={goat.name} goatId={goat.id} goatTag={goat.tag} full />
           </div>
         </div>
       )}
