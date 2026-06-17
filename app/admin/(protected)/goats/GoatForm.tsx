@@ -109,7 +109,7 @@ export default function GoatForm({ goat }: Props) {
       {error && <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: 10, padding: '10px 14px', fontFamily: 'var(--font-body)', fontSize: 13.5, color: '#dc2626' }}>{error}</div>}
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
-        {!isEdit && field('Goat ID (e.g. BTL-015)', input('text', form.id, v => set('id', v), { required: true, placeholder: 'BTL-015' }))}
+        {!isEdit && field('Goat ID (e.g. BTL-015)', input('text', form.id, v => set('id', v.trim().replace(/\s+/g, '-')), { required: true, placeholder: 'BTL-015' }))}
         {field('Name', input('text', form.name, v => set('name', v), { required: true, placeholder: 'Sultan' }))}
       </div>
 
