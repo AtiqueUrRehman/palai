@@ -15,7 +15,7 @@ import Btn from '@/components/Btn'
 const STATS = [
   { n: '1400+', l: 'Goats delivered till now' },
   { n: '100%', l: 'Customer satisfaction' },
-  { n: '7 years', l: 'Allah da wasta hy ghr janay do' },
+  { n: '7 years', l: 'of successful journey' },
 ]
 
 const FEATURES = [
