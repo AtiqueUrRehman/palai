@@ -41,7 +41,7 @@ export const farms: Record<string, FarmConfig> = {
     slug: 'malik',
     name: 'Sher Muhammad Livestock Farms',
     tagline: 'Raised in the fields of Thoha Mehram Khan. Delivered to your door.',
-    location: 'Thoha Mehram Khan, Rawalpindi',
+    location: 'Thoha Mehram Khan, Talagang',
     phone: '+92 301 9558219',
     whatsapp: '+92 301 9558219',
     theme: {},

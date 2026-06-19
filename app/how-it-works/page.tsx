@@ -8,7 +8,7 @@ import SectionHeading from '@/components/SectionHeading'
 import Btn from '@/components/Btn'
 
 const STEPS = [
-  { k: '01', t: 'Pick by video', d: 'Browse healthy, weighed goats. Watch a clip of each one and reserve the one you like with a token amount.' },
+  { k: '01', t: 'Pick by video', d: 'Browse healthy, weighed goats. Watch a clip of each one and reserve the one you like with full payment.' },
   { k: '02', t: 'We raise & care', d: 'Your goat stays on our farm. Daily feed, clean water, vaccinations and a vet on call — for a fixed monthly care charge.' },
   { k: '03', t: 'Monthly updates', d: 'Get a fresh video and weight update on Facebook every month, so you watch your animal grow.' },
   { k: '04', t: 'Delivered before Eid', d: 'We deliver to your doorstep 3–5 days prior to Eid-ul-Adha, healthy and ready for qurbani.' },
