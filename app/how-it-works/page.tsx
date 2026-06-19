@@ -22,7 +22,7 @@ const PRICES = [
 
 const FAQ = [
   { q: 'What does the monthly care charge cover?', a: 'Feed, clean water, shelter, routine vaccination and vet checkups. It is a fixed amount per goat per month, billed until delivery on Eid.' },
-  { q: 'What if my goat falls sick or dies?', a: 'We carry the risk. If your reserved goat cannot be delivered in healthy condition, we replace it with an equivalent or better animal at no extra cost — see Terms.' },
+  { q: 'What if my goat falls sick or dies?', a: 'If your goat falls sick, our team of professional veterinarians will treat it at no additional cost to you. In the unlikely event of death, 50% of the total amount paid will be refunded — see Terms.' },
   { q: 'Can I visit the farm?', a: 'Yes. You are welcome to visit by appointment and meet your goat in person before Eid.' },
   { q: 'How is delivery handled?', a: 'Rs 5,000 or less per animal in Rawalpindi, Islamabad, Lahore, Faisalabad, Gujranwala, Gujrat, Sialkot and Wazirabad — delivered 3–5 days prior to Eid. Other cities at actual transport cost.' },
 ]
