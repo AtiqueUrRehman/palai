@@ -56,7 +56,7 @@ export default async function HomePage() {
                   <span style={{ color: 'var(--teal)' }}>We raise it</span> till Eid.
                 </h1>
                 <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 'clamp(15.5px,1.7vw,17.5px)', lineHeight: 1.55, color: 'var(--sub)', maxWidth: 460 }}>
-                  Choose a healthy goat by video, reserve it with a token, and we care for it on our {farm.location} farm — delivered to your door on Eid morning.
+                  Choose a healthy goat by video, reserve it with a token, and we care for it on our farm — delivered to your doorstep 3–5 days prior to Eid.
                 </p>
                 <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                   <Link href="/goats"><Btn kind="primary" size="lg" icon>Browse goats</Btn></Link>
