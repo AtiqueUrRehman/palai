@@ -11,7 +11,6 @@ const NAV = [
   { href: '/goats', label: 'Browse goats' },
   { href: '/results', label: 'Last year' },
   { href: '/how-it-works', label: 'How it works' },
-  { href: '/about', label: 'About' },
   { href: '/terms', label: 'Terms' },
 ]
 
