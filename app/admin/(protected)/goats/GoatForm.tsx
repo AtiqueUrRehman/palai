@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import type { Goat } from '@/types/database'
 import Btn from '@/components/Btn'
 
-const BREEDS = ['Beetal', 'Teddy (Gujri)', 'Makhi Cheeni', 'Barbari', 'Nachi', 'Kamori']
+const BREEDS = ['Beetal', 'Teddy (Gujri)', 'Makhi Cheeni', 'Makhi Cheena', 'Barbari', 'Nachi', 'Kamori', 'Turkey Dumba', 'Rajanpuri']
 const TAGS = ['', 'Premium', 'Popular', 'Heavy', 'New']
 
 type Props = { goat?: Goat }

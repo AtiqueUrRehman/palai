@@ -83,7 +83,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
                   {[
                     { k: 'Goat price (one-time)', v: fmt(goat.price), bold: true },
                     { k: 'Monthly care till Eid', v: `${fmt(goat.care_fee)}/mo`, bold: false },
-                    { k: 'Doorstep delivery', v: fmt(5000), bold: false },
+                    { k: 'Doorstep delivery (3–5 days before Eid)', v: `${fmt(5000)} or less`, bold: false },
                   ].map(r => (
                     <div key={r.k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', padding: '5px 0' }}>
                       <span style={{ fontFamily: 'var(--font-body)', fontWeight: r.bold ? 600 : 400, fontSize: 14, lineHeight: 1.3, color: 'var(--ink)' }}>{r.k}</span>

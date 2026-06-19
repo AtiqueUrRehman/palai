@@ -13,7 +13,7 @@ import Btn from '@/components/Btn'
 
 const STATS = [
   { n: '640+', l: 'Goats delivered last Eid' },
-  { n: '100%', l: 'Delivered before Eid namaz' },
+  { n: '100%', l: 'Delivered 4 days prior to Eid' },
   { n: '9 yrs', l: 'Raising on the same farm' },
 ]
 
@@ -35,7 +35,7 @@ export default async function ResultsPage() {
       <main>
         <section style={{ padding: 'clamp(26px,5vw,48px) 0 8px' }}>
           <Wrap>
-            <SectionHeading label="Eid 2025 · Delivered" title="Last year, on camera" sub="Every goat below was reserved by video, raised on our farm, and delivered to the family on Eid morning. Here are their real handover clips." />
+            <SectionHeading label="Eid 2026 · Delivered" title="Last year, on camera" sub="Every goat below was reserved by video, raised on our farm, and delivered to the family 4 days prior to Eid. Here are their real handover clips." />
           </Wrap>
         </section>
 
