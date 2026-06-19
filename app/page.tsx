@@ -14,9 +14,9 @@ import Label from '@/components/Label'
 import Btn from '@/components/Btn'
 
 const STATS = [
-  { n: '640+', l: 'Goats delivered last Eid' },
-  { n: '100%', l: 'Delivered before Eid namaz' },
-  { n: '9 yrs', l: 'Raising on the same farm' },
+  { n: '80+', l: 'Goats delivered last Eid' },
+  { n: '100%', l: 'Repeat customers' },
+  { n: '7 yrs', l: 'Raising on the same farm' },
 ]
 
 const FEATURES = [
@@ -56,7 +56,7 @@ export default async function HomePage() {
                   <span style={{ color: 'var(--teal)' }}>We raise it</span> till Eid.
                 </h1>
                 <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 'clamp(15.5px,1.7vw,17.5px)', lineHeight: 1.55, color: 'var(--sub)', maxWidth: 460 }}>
-                  Choose a healthy goat by video, reserve it with a token, and we care for it on our farm — delivered to your doorstep 3–5 days prior to Eid.
+                  Choose a healthy goat by video, reserve it, and we care for it on our farm — delivered to your doorstep 3–5 days prior to Eid.
                 </p>
                 <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
                   <Link href="/goats"><Btn kind="primary" size="lg" icon>Browse goats</Btn></Link>
@@ -122,7 +122,7 @@ export default async function HomePage() {
               <div style={{ display: 'grid', gap: 14, maxWidth: 520 }}>
                 <Label><span style={{ color: 'var(--gold)' }}>Last Eid</span></Label>
                 <h2 style={{ margin: 0, fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 'clamp(23px,3vw,32px)', lineHeight: 1.12, letterSpacing: '-0.02em' }}>
-                  640+ families collected their goat on time
+                  80+ families collected their goat on time
                 </h2>
                 <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 'clamp(14px,1.5vw,15.5px)', lineHeight: 1.5, color: 'rgba(255,255,255,0.78)' }}>
                   Watch real delivery videos from last year&apos;s Eid before you decide.

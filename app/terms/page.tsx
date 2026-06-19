@@ -14,7 +14,6 @@ const CUSTODY = [
   { t: 'Non-payment', d: 'In the event that monthly dues remain unpaid for two (2) consecutive months, the Farm reserves the right to sell the animal without further notice. All outstanding dues shall be deducted from the sale proceeds, and any remaining balance shall be returned to the client within a reasonable timeframe.' },
   { t: 'Program duration & commencement', d: 'The custody period is ten (10) months. The program commences on 1 July 2026.' },
   { t: 'Payment obligation', d: 'Monthly fees are due and payable on a fixed schedule. Timely payment is a condition of continued participation in the program.' },
-  { t: 'Pricing commitment', d: 'The Farm commits to delivering the client\'s Qurbani animal at a price no less than three percent (3%) below prevailing open market rates for equivalent weight and quality at the time of delivery.' },
 ]
 
 const TERMS = [

@@ -12,9 +12,9 @@ import Tag from '@/components/Tag'
 import Btn from '@/components/Btn'
 
 const STATS = [
-  { n: '640+', l: 'Goats delivered last Eid' },
+  { n: '80+', l: 'Goats delivered last Eid' },
   { n: '100%', l: 'Delivered 4 days prior to Eid' },
-  { n: '9 yrs', l: 'Raising on the same farm' },
+  { n: '7 yrs', l: 'Raising on the same farm' },
 ]
 
 export default async function ResultsPage() {
