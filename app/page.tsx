@@ -50,7 +50,7 @@ export default async function HomePage() {
           <Wrap>
             <div className="md:grid" style={{ gridTemplateColumns: '1.02fr 0.98fr', gap: 50, alignItems: 'center' }}>
               <div style={{ display: 'grid', gap: 18 }}>
-                <Tag tone="teal"><Star size={13} color="var(--teal)" fill="var(--teal)" /> Eid-ul-Adha 2026 · Booking open</Tag>
+                <Tag tone="teal"><Star size={13} color="var(--teal)" fill="var(--teal)" /> Eid-ul-Adha 2027 · Booking open</Tag>
                 <h1 style={{ margin: 0, fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 'clamp(36px,5.5vw,54px)', lineHeight: 1.04, letterSpacing: '-0.02em', color: 'var(--ink)' }}>
                   Pick your Qurbani goat.<br />
                   <span style={{ color: 'var(--teal)' }}>We raise it</span> till Eid.

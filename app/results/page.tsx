@@ -9,7 +9,7 @@ import SectionHeading from '@/components/SectionHeading'
 import Btn from '@/components/Btn'
 
 const STATS = [
-  { n: '80+', l: 'Goats delivered last Eid' },
+  { n: '1400+', l: 'Goats delivered last Eid' },
   { n: '100%', l: 'Repeat customers' },
   { n: '7 yrs', l: 'Raising on the same farm' },
 ]
@@ -24,7 +24,7 @@ export default async function ResultsPage() {
     .eq('farm_slug', farm.slug)
     .order('created_at', { ascending: false })
 
-  const list = videos ?? []
+  const list = (videos ?? []).filter(v => v.video_url)
 
   return (
     <>
