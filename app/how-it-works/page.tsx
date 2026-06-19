@@ -11,12 +11,12 @@ const STEPS = [
   { k: '01', t: 'Pick by video', d: 'Browse healthy, weighed goats. Watch a clip of each one and reserve the one you like with full payment.' },
   { k: '02', t: 'We raise & care', d: 'Your goat stays on our farm. Daily feed, clean water, vaccinations and a vet on call — for a fixed monthly care charge.' },
   { k: '03', t: 'Monthly updates', d: 'Get a fresh video and weight update on Facebook every month, so you watch your animal grow.' },
-  { k: '04', t: 'Delivered before Eid', d: 'We deliver to your doorstep 3–5 days prior to Eid-ul-Adha, healthy and ready for qurbani.' },
+  { k: '04', t: 'Delivered before Eid', d: 'We deliver to your doorstep 3–5 days prior to Eid-ul-Adha, healthy and ready for Qurbani.' },
 ]
 
 const PRICES = [
   { icon: Check, title: 'Goat price', amount: 'From Rs 65,000', note: 'One-time, set when you reserve. Varies by breed, weight and age — shown on each goat.', highlight: false },
-  { icon: Leaf, title: 'Monthly care', amount: 'Rs 12,000–15,000 / mo', note: 'Per goat, billed monthly until Eid. Covers feed, water, shelter, vaccination and vet.', highlight: true },
+  { icon: Leaf, title: 'Monthly care', amount: 'Rs 12,000–15,000 / mo', note: 'Per goat, billed monthly until Eid. Covers feed, water, shelter, vaccinations and vet care.', highlight: true },
   { icon: Truck, title: 'Delivery', amount: 'Rs 5,000 or less', note: 'Rawalpindi, Islamabad, Lahore, Faisalabad, Gujranwala, Gujrat, Sialkot & Wazirabad — 3–5 days prior to Eid.', highlight: false },
 ]
 
@@ -34,7 +34,7 @@ export default function HowPage() {
     <>
       <section style={{ padding: 'clamp(26px,5vw,48px) 0 8px' }}>
         <Wrap>
-          <SectionHeading label="How it works" title="Four steps to Eid" sub="From picking your goat to qurbani — here's exactly how it goes, and what it costs." />
+          <SectionHeading label="How it works" title="Four steps to Eid" sub="From picking your goat to Qurbani — here's exactly how it goes, and what it costs." />
         </Wrap>
       </section>
 

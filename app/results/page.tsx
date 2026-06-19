@@ -9,9 +9,9 @@ import SectionHeading from '@/components/SectionHeading'
 import Btn from '@/components/Btn'
 
 const STATS = [
-  { n: '1400+', l: 'Goats delivered last Eid' },
-  { n: '100%', l: 'Repeat customers' },
-  { n: '7 yrs', l: 'Raising on the same farm' },
+  { n: '1400+', l: 'Goats delivered till now' },
+  { n: '100%', l: 'Customer satisfaction' },
+  { n: '7 years', l: 'of successful journey' },
 ]
 
 export default async function ResultsPage() {
@@ -32,7 +32,7 @@ export default async function ResultsPage() {
       <main>
         <section style={{ padding: 'clamp(26px,5vw,48px) 0 8px' }}>
           <Wrap>
-            <SectionHeading label="Eid 2025 · Delivered" title="Last year, on camera" sub="Every goat below was reserved by video, raised on our farm, and delivered to the family before Eid. Here are their real handover clips." />
+            <SectionHeading label="Eid 2026 · Delivered" title="Last year, on camera" sub="Every goat below was reserved by video, raised on our farm, and delivered to the family before Eid. Here are their real handover clips." />
           </Wrap>
         </section>
 
