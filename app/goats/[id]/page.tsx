@@ -90,11 +90,6 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
                       <span style={{ fontFamily: 'var(--font-head)', fontWeight: r.bold ? 750 : 550, fontSize: 14.5, color: 'var(--ink)', whiteSpace: 'nowrap' }}>{r.v}</span>
                     </div>
                   ))}
-                  <div style={{ height: 1, background: 'rgba(15,32,29,0.12)', margin: '12px 0' }} />
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', padding: '5px 0' }}>
-                    <span style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 14, lineHeight: 1.3, color: 'var(--gold)' }}>Token to reserve today</span>
-                    <span style={{ fontFamily: 'var(--font-head)', fontWeight: 750, fontSize: 14.5, color: 'var(--gold)', whiteSpace: 'nowrap' }}>{fmt(20000)}</span>
-                  </div>
                 </div>
 
                 {!goat.reserved && (
@@ -107,9 +102,6 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
                     <Check size={16} /> This goat has been reserved
                   </div>
                 )}
-                <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 12.5, lineHeight: 1.5, color: 'var(--faint)' }}>
-                  Token is adjusted into the final price. Care charges billed monthly until delivery. See Terms for health &amp; replacement policy.
-                </p>
               </div>
             </div>
           </div>
