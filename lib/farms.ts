@@ -29,9 +29,9 @@ const BASE_THEME: FarmTheme = {
   ink: '#241f16',
   sub: '#6f6452',
   faint: '#9a8f79',
-  teal: '#128C7E',
-  tealDeep: '#075E54',
-  tealSoft: '#d9f0eb',
+  teal: '#13514a',
+  tealDeep: '#0e3c37',
+  tealSoft: '#dcebe5',
   gold: '#c08a2b',
   goldSoft: '#f0e2c6',
 }

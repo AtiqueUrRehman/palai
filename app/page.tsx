@@ -6,7 +6,6 @@ import { supabase } from '@/lib/supabase'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Wrap from '@/components/Wrap'
-import VideoThumb from '@/components/VideoThumb'
 import GoatCard from '@/components/GoatCard'
 import SectionHeading from '@/components/SectionHeading'
 import Tag from '@/components/Tag'
@@ -64,7 +63,8 @@ export default async function HomePage() {
                 </div>
               </div>
               <div style={{ marginTop: 24 }} className="md:mt-0">
-                <VideoThumb ratio="4 / 3" dur="0:48" label="farm-tour.mp4" big breedSeed={0} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/tour.png" alt="Farm tour" style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-lg)', display: 'block', boxShadow: 'var(--shadow)' }} />
               </div>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 'clamp(10px,2.5vw,24px)', marginTop: 'clamp(22px,4vw,44px)', maxWidth: 640 }}>
