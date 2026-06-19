@@ -20,7 +20,7 @@ const STATS = [
 
 const FEATURES = [
   { icon: Video, title: 'Choose by video', desc: 'See every goat on camera — weight, teeth and temperament — before you commit.' },
-  { icon: Leaf, title: 'Cared for daily', desc: 'Fresh feed, clean water, vaccinations and a vet on call for a fixed monthly charge.' },
+  { icon: Leaf, title: 'Organic & natural', desc: 'Fresh organic feed, clean water, vaccinations and a vet on call. Zero steroids, zero hormones — raised the way nature intended.' },
   { icon: Bell, title: 'Monthly updates', desc: 'A new video and weight update on Facebook every month until Eid.' },
   { icon: Truck, title: 'Delivered before Eid', desc: 'Doorstep delivery (Rs 5,000 or less) in major cities, 3–5 days prior to Eid.' },
 ]
