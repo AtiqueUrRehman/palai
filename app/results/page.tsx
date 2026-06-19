@@ -53,7 +53,7 @@ export default async function ResultsPage() {
           <section style={{ padding: 'clamp(24px,4vw,36px) 0 8px' }}>
             <Wrap>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: 'clamp(12px,2vw,16px)' }} className="md:[grid-template-columns:repeat(3,1fr)]">
-                {list.map((v, i) => (
+                {list.slice(1).map((v, i) => (
                   <video
                     key={i}
                     src={v.video_url}

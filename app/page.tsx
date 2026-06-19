@@ -14,7 +14,7 @@ import Label from '@/components/Label'
 import Btn from '@/components/Btn'
 
 const STATS = [
-  { n: '80+', l: 'Goats delivered last Eid' },
+  { n: '1400+', l: 'Goats delivered last Eid' },
   { n: '100%', l: 'Repeat customers' },
   { n: '7 yrs', l: 'Raising on the same farm' },
 ]
@@ -122,7 +122,7 @@ export default async function HomePage() {
               <div style={{ display: 'grid', gap: 14, maxWidth: 520 }}>
                 <Label><span style={{ color: 'var(--gold)' }}>Last Eid</span></Label>
                 <h2 style={{ margin: 0, fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 'clamp(23px,3vw,32px)', lineHeight: 1.12, letterSpacing: '-0.02em' }}>
-                  80+ families collected their goat on time
+                  210+ families collected their goat on time
                 </h2>
                 <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 'clamp(14px,1.5vw,15.5px)', lineHeight: 1.5, color: 'rgba(255,255,255,0.78)' }}>
                   Watch real delivery videos from last year&apos;s Eid before you decide.
