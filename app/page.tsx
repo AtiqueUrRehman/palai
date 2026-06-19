@@ -14,8 +14,8 @@ import Label from '@/components/Label'
 import Btn from '@/components/Btn'
 
 const STATS = [
-  { n: '1400+', l: 'Goats delivered last Eid' },
-  { n: '100%', l: 'Repeat customers' },
+  { n: '1400+', l: 'Goats delivered till now' },
+  { n: '100%', l: 'Customer satisfaction' },
   { n: '7 yrs', l: 'Raising on the same farm' },
 ]
 
