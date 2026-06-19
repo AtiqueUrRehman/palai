@@ -63,8 +63,10 @@ export default async function HomePage() {
                 </div>
               </div>
               <div style={{ marginTop: 24 }} className="md:mt-0">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/tour.png" alt="Farm tour" style={{ width: '100%', height: 'auto', borderRadius: 'var(--radius-lg)', display: 'block', boxShadow: 'var(--shadow)' }} />
+                <div style={{ width: '100%', aspectRatio: '1 / 1', borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/tour.png" alt="Farm tour" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
               </div>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 'clamp(10px,2.5vw,24px)', marginTop: 'clamp(22px,4vw,44px)', maxWidth: 640 }}>
