@@ -41,7 +41,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
           <div className="md:grid" style={{ gridTemplateColumns: '1.05fr 0.95fr', gap: 44, alignItems: 'start' }}>
             {/* media */}
             <div>
-              <VideoThumb ratio="16 / 12" src={goat.video_url} dur={goat.video_dur} label={`${goat.id}.mp4`} big breedSeed={2} />
+              <VideoThumb ratio="16 / 12" src={goat.video_url} dur={goat.video_dur} label={`${goat.id}.mp4`} big breedSeed={2} reserved={goat.reserved} />
               {goat.photo_urls?.length > 0 && (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginTop: 8 }}>
                   {(goat.photo_urls as string[]).slice(0, 3).map((url: string, i: number) => (

@@ -7,16 +7,17 @@ type Props = {
   label?: string
   big?: boolean
   breedSeed?: number
+  reserved?: boolean
 }
 
 const HUE = [168, 150, 38, 190, 130]
 
-export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = false, breedSeed = 0 }: Props) {
+export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = false, breedSeed = 0, reserved = false }: Props) {
   const hue = HUE[breedSeed % HUE.length]
 
   if (src) {
     return (
-      <div style={{ position: 'relative', width: '100%', borderRadius: big ? 'var(--radius-lg)' : 'var(--radius)', overflow: 'hidden', background: '#000' }}>
+      <div style={{ position: 'relative', width: '100%', borderRadius: big ? 'var(--radius-lg)' : 'var(--radius)', overflow: 'hidden', background: '#000', filter: reserved ? 'grayscale(1) brightness(0.6)' : 'none' }}>
         <video
           src={src}
           controls
