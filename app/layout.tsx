@@ -21,6 +21,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Sher Muhammad Livestock Farms — Qurbani Goats',
   description: 'Reserve your Eid-ul-Adha goat by video. Raised in Thoha Mehram Khan, we care for it and deliver on Eid morning.',
+  icons: { icon: '/logo.png' },
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
