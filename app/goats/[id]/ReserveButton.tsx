@@ -14,7 +14,7 @@ export default function ReserveButton({
   full?: boolean
 }) {
   const tag = goatTag ? ` [${goatTag}]` : ''
-  const message = `Assalam o Alaikum, I want to reserve *${goatName}*${tag} (ID: ${goatId}). Please share the token payment details.`
+  const message = `Assalam o Alaikum, I want to reserve *${goatName}*${tag} (ID: ${goatId}). Please share the payment details.`
   const url = `https://wa.me/923019558219?text=${encodeURIComponent(message)}`
 
   return (
