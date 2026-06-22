@@ -17,8 +17,9 @@ export default function Footer({ farm }: { farm: FarmConfig }) {
         <div className="md:grid" style={{ gap: 40, gridTemplateColumns: '1.4fr 1fr 1fr' }}>
           <div style={{ marginBottom: 32 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 18 }}>
-              <div style={{ width: 32, height: 32, borderRadius: 11, background: 'rgba(255,255,255,0.1)', display: 'grid', placeItems: 'center' }}>
-                <span style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: 17, color: 'var(--gold)' }}>M</span>
+              <div style={{ width: 36, height: 36, flexShrink: 0 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo.png" alt="Sher Muhammad Livestock Farms" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
               </div>
               <span style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 18 }}>{farm.name}</span>
             </div>

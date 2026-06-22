@@ -23,8 +23,9 @@ export default function Header({ farmName }: { farmName: string }) {
       <div style={{ background: 'rgba(244,238,225,0.86)', backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)', borderBottom: '1px solid var(--line)' }}>
         <div style={{ maxWidth: 1120, margin: '0 auto', padding: 'clamp(12px, 1.5vw, 14px) clamp(18px, 4vw, 44px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 9, textDecoration: 'none' }}>
-            <div style={{ width: 32, height: 32, borderRadius: 11, background: 'var(--teal)', display: 'grid', placeItems: 'center', boxShadow: 'var(--shadow-sm)' }}>
-              <span style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: 17, color: 'var(--gold)' }}>M</span>
+            <div style={{ width: 36, height: 36, flexShrink: 0 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="Sher Muhammad Livestock Farms" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
             </div>
             <span style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 18, color: 'var(--ink)', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
               {farmName}
