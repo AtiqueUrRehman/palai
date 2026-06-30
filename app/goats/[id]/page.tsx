@@ -57,9 +57,12 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
               <div style={{ display: 'grid', gap: 14 }}>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <h1 style={{ margin: 0, fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 'clamp(26px,3.5vw,34px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--ink)' }}>
-                      {goat.name}
-                    </h1>
+                    <div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 11, color: 'var(--sub)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: 4 }}>Goat ID</div>
+                      <h1 style={{ margin: 0, fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 'clamp(26px,3.5vw,34px)', lineHeight: 1.05, letterSpacing: '-0.02em', color: 'var(--ink)' }}>
+                        {goat.id}
+                      </h1>
+                    </div>
                     {goat.tag && <Tag tone="gold">{goat.tag}</Tag>}
                   </div>
                   <div style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 14, color: 'var(--faint)', marginTop: 6 }}>

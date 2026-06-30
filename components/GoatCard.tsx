@@ -41,8 +41,9 @@ export default function GoatCard({ goat, idx = 0 }: { goat: Goat; idx?: number }
         <div style={{ padding: '13px 14px 15px', display: 'grid', gap: 10, flex: 1 }}>
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 17, lineHeight: 1.1, color: 'var(--ink)', letterSpacing: '-0.02em' }}>
-                {goat.name}
+              <div style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 10, color: 'var(--sub)', textTransform: 'uppercase', letterSpacing: '0.07em' }}>Goat ID</div>
+              <div style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 17, lineHeight: 1.1, color: 'var(--ink)', letterSpacing: '-0.02em', marginTop: 2 }}>
+                {goat.id}
               </div>
               <div style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: 12.5, color: 'var(--faint)', marginTop: 2 }}>
                 {goat.breed}
