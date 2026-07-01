@@ -7,6 +7,7 @@ import VideoThumb from '@/components/VideoThumb'
 import Tag from '@/components/Tag'
 import Wrap from '@/components/Wrap'
 import ReserveButton from './ReserveButton'
+import GoatViewTracker from './GoatViewTracker'
 
 export default async function GoatDetailPage(props: { params: Promise<{ id: string }> }) {
   const { id } = await props.params
@@ -41,7 +42,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
           <div className="md:grid" style={{ gridTemplateColumns: '1.05fr 0.95fr', gap: 44, alignItems: 'start' }}>
             {/* media */}
             <div>
-              <VideoThumb ratio="16 / 12" src={goat.video_url} dur={goat.video_dur} label={`${goat.id}.mp4`} big breedSeed={2} reserved={goat.reserved} />
+              <VideoThumb ratio="16 / 12" src={goat.video_url} dur={goat.video_dur} label={`${goat.id}.mp4`} big breedSeed={2} reserved={goat.reserved} trackId={goat.id} />
               {goat.photo_urls?.length > 0 && (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginTop: 8 }}>
                   {(goat.photo_urls as string[]).slice(0, 3).map((url: string, i: number) => (
@@ -52,6 +53,7 @@ export default async function GoatDetailPage(props: { params: Promise<{ id: stri
               )}
             </div>
 
+            <GoatViewTracker goatId={goat.id} goatName={goat.name} />
             {/* info */}
             <div style={{ marginTop: 20 }} className="md:mt-0">
               <div style={{ display: 'grid', gap: 14 }}>

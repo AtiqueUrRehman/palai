@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { MessageCircle, MapPin } from 'lucide-react'
 import type { FarmConfig } from '@/lib/farms'
+import { track } from '@/lib/analytics'
 
 const NAV = [
   { href: '/', label: 'Home' },
@@ -24,7 +27,7 @@ export default function Footer({ farm }: { farm: FarmConfig }) {
               <span style={{ fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: 18 }}>{farm.name}</span>
             </div>
             <p style={{ margin: '0 0 20px', fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.5, color: 'rgba(255,255,255,0.7)', maxWidth: 320 }}>
-              Thoha Mehram Khan, Talagang. Qurbani Aap ki, Zimedari hamari.
+              <a href="https://maps.google.com/?q=32.799789,72.274384" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'underline', textUnderlineOffset: 3 }}>Thoha Mehram Khan, Talagang.</a> Qurbani Aap ki, Zimedari hamari.
             </p>
           </div>
 
@@ -40,7 +43,7 @@ export default function Footer({ farm }: { farm: FarmConfig }) {
           <div>
             <div style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 12, color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 12 }}>Contact</div>
             <div style={{ display: 'grid', gap: 10 }}>
-              <a href={`https://wa.me/${farm.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 10, color: '#fff', textDecoration: 'none', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 14 }}>
+              <a href={`https://wa.me/${farm.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 10, color: '#fff', textDecoration: 'none', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 14 }} onClick={() => track('whatsapp_click', { source: 'footer' })}>
                 <MessageCircle size={20} color="#25D366" /> {farm.whatsapp}
               </a>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(255,255,255,0.7)' }}>

@@ -1,4 +1,7 @@
+'use client'
+
 import { Play } from 'lucide-react'
+import { track } from '@/lib/analytics'
 
 type Props = {
   src?: string | null
@@ -8,6 +11,7 @@ type Props = {
   big?: boolean
   breedSeed?: number
   reserved?: boolean
+  trackId?: string
 }
 
 const HUE = [168, 150, 38, 190, 130]
@@ -19,7 +23,7 @@ function parseBunny(url: string): { cdn: string; guid: string } | null {
   return m ? { cdn: m[1], guid: m[2] } : null
 }
 
-export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = false, breedSeed = 0, reserved = false }: Props) {
+export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = false, breedSeed = 0, reserved = false, trackId }: Props) {
   const hue = HUE[breedSeed % HUE.length]
   const filter = reserved ? 'grayscale(1) brightness(0.6)' : 'none'
   const radii = { borderRadius: big ? 'var(--radius-lg)' : 'var(--radius)' }
@@ -58,6 +62,7 @@ export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = fal
             controls
             playsInline
             style={{ width: '100%', height: 'auto', maxHeight: '80vh', display: 'block' }}
+            onPlay={() => trackId && track('video_play', { goat_id: trackId })}
           />
           {durBadge}
         </div>
