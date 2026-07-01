@@ -31,7 +31,7 @@ export default function GoatCard({ goat, idx = 0 }: { goat: Goat; idx?: number }
         }}
       >
         <div style={{ position: 'relative' }}>
-          <VideoThumb ratio="4 / 3" src={goat.video_url} dur={goat.video_dur} label={goat.id} breedSeed={idx} reserved={goat.reserved} />
+          <VideoThumb ratio="9 / 16" src={goat.video_url} dur={goat.video_dur} label={goat.id} breedSeed={idx} reserved={goat.reserved} />
           <div style={{ position: 'absolute', left: 11, bottom: 11, display: 'flex', gap: 6 }}>
             {goat.reserved
               ? <Tag tone="muted">Reserved</Tag>

@@ -36,7 +36,7 @@ export default function BrowsePage() {
               Loading…
             </p>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'clamp(13px,2vw,20px)' }} className="md:[grid-template-columns:repeat(4,1fr)]">
+            <div className="grid md:[grid-template-columns:repeat(2,1fr)]" style={{ gap: 'clamp(13px,2vw,20px)' }}>
               {goats.map((g, i) => <GoatCard key={g.id} goat={g} idx={i} />)}
             </div>
           )}

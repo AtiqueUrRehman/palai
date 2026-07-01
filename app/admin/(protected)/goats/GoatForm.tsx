@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import * as tus from 'tus-js-client'
 import { useRouter } from 'next/navigation'
 import type { Goat } from '@/types/database'
 import Btn from '@/components/Btn'
@@ -30,6 +31,7 @@ export default function GoatForm({ goat }: Props) {
 
   const [videoFile, setVideoFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
+  const [uploadProgress, setUploadProgress] = useState(0)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
 
@@ -45,16 +47,34 @@ export default function GoatForm({ goat }: Props) {
 
       if (videoFile) {
         setUploading(true)
-        const res = await fetch('/api/upload', {
+        setUploadProgress(0)
+
+        const bunnyRes = await fetch('/api/bunny', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filename: videoFile.name, contentType: videoFile.type, farmSlug: 'malik', goatId: form.id || 'new' }),
+          body: JSON.stringify({ title: form.id || 'goat' }),
         })
-        const resText = await res.text()
-        if (!res.ok) throw new Error(`Upload API ${res.status}: ${resText}`)
-        const { uploadUrl, publicUrl } = JSON.parse(resText)
-        const putRes = await fetch(uploadUrl, { method: 'PUT', body: videoFile, headers: { 'Content-Type': videoFile.type } })
-        if (!putRes.ok) throw new Error(`R2 PUT failed ${putRes.status} — check CORS settings`)
+        if (!bunnyRes.ok) throw new Error('Failed to initialise video upload')
+        const { guid, signature, expiry, libraryId, publicUrl } = await bunnyRes.json()
+
+        await new Promise<void>((resolve, reject) => {
+          const upload = new tus.Upload(videoFile, {
+            endpoint: 'https://video.bunnycdn.com/tusupload',
+            retryDelays: [0, 3000, 5000],
+            headers: {
+              AuthorizationSignature: signature,
+              AuthorizationExpire: String(expiry),
+              VideoId: guid,
+              LibraryId: libraryId,
+            },
+            metadata: { filetype: videoFile.type, title: form.id || 'goat' },
+            onProgress: (uploaded, total) => setUploadProgress(Math.round((uploaded / total) * 100)),
+            onSuccess: () => resolve(),
+            onError: reject,
+          })
+          upload.start()
+        })
+
         videoUrl = publicUrl
         setUploading(false)
       }
@@ -158,7 +178,7 @@ export default function GoatForm({ goat }: Props) {
 
       <div style={{ display: 'flex', gap: 10, justifyContent: 'space-between', alignItems: 'center', marginTop: 4 }}>
         <Btn type="submit" kind="primary" size="lg" disabled={saving || uploading}>
-          {uploading ? 'Uploading video…' : saving ? 'Saving…' : isEdit ? 'Save changes' : 'Add goat'}
+          {uploading ? `Uploading video… ${uploadProgress}%` : saving ? 'Saving…' : isEdit ? 'Save changes' : 'Add goat'}
         </Btn>
         {isEdit && (
           <button type="button" onClick={handleDelete} style={{ border: 'none', background: 'none', cursor: 'pointer', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 13, color: '#dc2626', padding: '8px 4px' }}>
