@@ -12,11 +12,11 @@ type Props = {
 
 const HUE = [168, 150, 38, 190, 130]
 
-const CDN = process.env.NEXT_PUBLIC_BUNNY_CDN_HOSTNAME
 const LIB = process.env.NEXT_PUBLIC_BUNNY_LIBRARY_ID
 
-function bunnyGuid(url: string): string | null {
-  return url.match(/\.b-cdn\.net\/([^/]+)\//)?.[1] ?? null
+function parseBunny(url: string): { cdn: string; guid: string } | null {
+  const m = url.match(/https:\/\/(vz-[^/]+\.b-cdn\.net)\/([^/]+)\//)
+  return m ? { cdn: m[1], guid: m[2] } : null
 }
 
 export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = false, breedSeed = 0, reserved = false }: Props) {
@@ -31,14 +31,14 @@ export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = fal
   )
 
   if (src) {
-    const guid = bunnyGuid(src)
+    const bunny = parseBunny(src)
 
-    if (guid && !big) {
+    if (bunny && !big) {
       // Browse card: static thumbnail + play overlay (no video download)
       return (
         <div style={{ position: 'relative', width: '100%', aspectRatio: ratio, overflow: 'hidden', filter, ...radii }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`https://${CDN}/${guid}/thumbnail.jpg`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <img src={`https://${bunny.cdn}/${bunny.guid}/thumbnail.jpg`} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center' }}>
             <div style={{ width: 54, height: 54, borderRadius: 999, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)', border: '1.5px solid rgba(255,255,255,0.4)', display: 'grid', placeItems: 'center', paddingLeft: 3 }}>
               <Play size={20} fill="#fff" color="#fff" />
@@ -49,7 +49,7 @@ export default function VideoThumb({ src, ratio = '4 / 3', dur, label, big = fal
       )
     }
 
-    if (guid && big) {
+    if (bunny && big) {
       // Detail page: native video tag — browser applies rotation metadata correctly
       return (
         <div style={{ position: 'relative', width: '100%', overflow: 'hidden', filter, ...radii, background: '#000' }}>
