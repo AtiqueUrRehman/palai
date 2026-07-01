@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque, Plus_Jakarta_Sans } from 'next/font/google'
 import { headers } from 'next/headers'
+import Script from 'next/script'
 import { getFarm, getTheme, themeToCssVars } from '@/lib/farms'
 import './globals.css'
 
@@ -37,6 +38,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       style={cssVars as React.CSSProperties}
       className={`${bricolage.variable} ${plusJakarta.variable}`}
     >
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-5QKL2GJZLE" strategy="afterInteractive" />
+      <Script id="ga-init" strategy="afterInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5QKL2GJZLE');
+      `}</Script>
       <body>{children}</body>
     </html>
   )
